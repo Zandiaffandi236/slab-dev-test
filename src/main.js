@@ -10,6 +10,16 @@ ScrollReveal().reveal('.nav-item', {
   interval: 100  //
 })
 
+ScrollReveal().reveal('.hero-reveal', {
+  distance: '50px',
+  duration: 800,
+  easing: 'ease-out',
+  origin: 'bottom',
+  interval: 100  //
+})
+
+
+
 const hamMenu = document.querySelector('.ham-menu')
 const offScreenMenu = document.querySelector('.off-screen-menu');
 

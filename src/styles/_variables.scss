@@ -26,18 +26,6 @@ body {
   }
 }
 
-@function mobileScale($size1440px) {
-  @return calc(#{$size1440px} * (320 / 1440));
-}
-
-@function tabScale($size1440px) {
-  @return calc(#{$size1440px} * (481 / 1440));
-}
-
-@function smallLaptopScale($size1440px) {
-  @return calc(#{$size1440px} * (769 / 1440));
-}
-
 @mixin responsive($property, $value, $design-width: 1440px) {
   #{$property}: $value;
 
@@ -82,7 +70,136 @@ body {
   }
 }
 
-$primary-color: #3498db;
+$label-color: #eceeff;
 $royal-blue: #403df4;
 $pure-white: #ffffff;
 $navy-blue: #001a42;
+$golden-yellow: #ffb400;
+
+.label {
+  background-color: $label-color;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: 0.65rem;
+
+  @media (min-width: 481px) {
+    font-size: 0.5rem;
+  }
+
+  @media (min-width: 769px) {
+    @include responsive(font-size, 1rem);
+  }
+}
+
+.main-btn {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  background-color: $golden-yellow;
+  border: none;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  padding: 1rem;
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .main-btn-icon {
+    width: 0.55rem;
+    height: 0.55rem;
+  }
+
+  @media (min-width: 481px) {
+    @include responsive(font-size, 1rem);
+    @include responsive(gap, 0.625rem);
+    @include responsive(gap, 1.5rem);
+
+    .main-btn-icon {
+      @include responsive(width, 0.75rem);
+      @include responsive(height, 0.75rem);
+    }
+  }
+
+  @media (min-width: 769px) {
+    @include responsive(font-size, 1rem);
+    @include responsive(gap, 0.625rem);
+    @include responsive(gap, 1.5rem);
+
+    .main-btn-icon {
+      @include responsive(width, 0.75rem);
+      @include responsive(height, 0.75rem);
+    }
+  }
+
+  @media (min-width: 1025px) {
+    @include responsive(font-size, 1rem);
+    @include responsive(gap, 0.625rem);
+    @include responsive(gap, 1.5rem);
+
+    .main-btn-icon {
+      @include responsive(width, 0.75rem);
+      @include responsive(height, 0.75rem);
+    }
+  }
+}
+
+.sec-btn {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  background-color: $pure-white;
+  border: none;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  padding: 1rem;
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .sec-btn-icon {
+    width: 0.55rem;
+    height: 0.55rem;
+  }
+
+  @media (min-width: 481px) {
+    @include responsive(font-size, 1rem);
+    @include responsive(gap, 0.625rem);
+    @include responsive(gap, 1.5rem);
+
+    .sec-btn-icon {
+      @include responsive(width, 0.75rem);
+      @include responsive(height, 0.75rem);
+    }
+  }
+
+  @media (min-width: 769px) {
+    @include responsive(font-size, 1rem);
+    @include responsive(gap, 0.625rem);
+    @include responsive(gap, 1.5rem);
+
+    .sec-btn-icon {
+      @include responsive(width, 0.75rem);
+      @include responsive(height, 0.75rem);
+    }
+  }
+
+  @media (min-width: 1025px) {
+    @include responsive(font-size, 1rem);
+    @include responsive(gap, 0.625rem);
+    @include responsive(gap, 1.5rem);
+
+    .sec-btn-icon {
+      @include responsive(width, 0.75rem);
+      @include responsive(height, 0.75rem);
+    }
+  }
+}
