@@ -75,6 +75,7 @@ $royal-blue: #403df4;
 $pure-white: #ffffff;
 $navy-blue: #001a42;
 $golden-yellow: #ffb400;
+$light-grey: #f6f6f6;
 
 .label {
   background-color: $label-color;
@@ -119,7 +120,7 @@ $golden-yellow: #ffb400;
   @media (min-width: 481px) {
     @include responsive(font-size, 1rem);
     @include responsive(gap, 0.625rem);
-    @include responsive(gap, 1.5rem);
+    @include responsive(padding, 1.5rem);
 
     .main-btn-icon {
       @include responsive(width, 0.75rem);
@@ -130,7 +131,7 @@ $golden-yellow: #ffb400;
   @media (min-width: 769px) {
     @include responsive(font-size, 1rem);
     @include responsive(gap, 0.625rem);
-    @include responsive(gap, 1.5rem);
+    @include responsive(padding, 1.5rem);
 
     .main-btn-icon {
       @include responsive(width, 0.75rem);
@@ -141,7 +142,7 @@ $golden-yellow: #ffb400;
   @media (min-width: 1025px) {
     @include responsive(font-size, 1rem);
     @include responsive(gap, 0.625rem);
-    @include responsive(gap, 1.5rem);
+    @include responsive(padding, 1.5rem);
 
     .main-btn-icon {
       @include responsive(width, 0.75rem);

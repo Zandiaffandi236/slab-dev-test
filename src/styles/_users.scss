@@ -1,0 +1,330 @@
+@mixin white-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+$animationSpeed: 10s;
+
+// Animation
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+// Styling
+.slider {
+  background: white;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+
+  &::before,
+  &::after {
+    @include white-gradient;
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+
+  &::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+  }
+
+  .slide-track {
+    animation: scroll $animationSpeed linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+
+  .slide {
+    height: 100px;
+    width: 250px;
+  }
+}
+
+#users {
+  @include responsive-padding(3.125rem, 3.125rem);
+
+  .users-download-card {
+    display: none;
+  }
+
+  .users-card {
+    @include responsive(padding, 3.125rem);
+    @include responsive(border-radius, 2rem);
+    background-image: url("../images/users-panel.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    color: $pure-white;
+    position: relative;
+
+    h1 {
+      margin-block-start: 0;
+      margin-block-end: 0;
+      font-weight: normal;
+      font-size: 1rem;
+    }
+
+    p {
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+
+    .users-art {
+      @include responsive(width, 13.4rem);
+      @include responsive(height, 14.5rem);
+      position: absolute;
+      right: -0.5rem;
+      bottom: 0;
+    }
+  }
+}
+
+#partners {
+  .slide-track {
+    display: flex;
+    overflow: hidden;
+    padding: 3rem 0;
+  }
+
+  .slide img {
+    height: 2.125rem;
+    width: auto;
+  }
+}
+
+.stats {
+  display: flex;
+  @include responsive(gap, 4.5rem);
+  @include responsive(margin-top, 2rem);
+  // margin-top: 2rem;
+}
+
+.stats-heading {
+  // @include responsive(font-size, 3.5rem);
+  font-size: 2.25rem;
+}
+
+.stats-sub-heading {
+  // @include responsive(font-size, 1.5rem);
+  font-size: 0.75rem;
+}
+
+.users-mobile-btn {
+  margin-top: 1rem;
+}
+
+@media (min-width: 481px) {
+  .users-mobile-btn {
+    display: none;
+  }
+
+  .stats-heading {
+    @include responsive(font-size, 3.5rem);
+  }
+
+  .stats-sub-heading {
+    @include responsive(font-size, 1.5rem);
+  }
+
+  #partners {
+    .slide img {
+      @include responsive(height, 3.125rem);
+    }
+  }
+
+  #users {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+    @include responsive(gap, 1.25rem);
+
+    .users-card {
+      h1 {
+        @include responsive(font-size, 2rem);
+        @include responsive(max-width, 38.2rem);
+        @include responsive(margin-bottom, 2rem);
+      }
+    }
+
+    .users-download-card {
+      display: block;
+      background-color: $light-grey;
+      position: relative;
+      @include responsive(padding, 2.5rem);
+      @include responsive(border-radius, 2rem);
+      @include responsive(max-height, 18.9rem);
+
+      h1 {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        @include responsive(font-size, 1.25rem);
+        @include responsive(margin-top, 1rem);
+        @include responsive(margin-bottom, 0.6rem);
+        @include responsive(max-width, 14.1rem);
+      }
+
+      .users-download-card-img {
+        @include responsive(width, 3.5rem);
+        @include responsive(height, 3.5rem);
+      }
+
+      .users-download-card-art {
+        position: absolute;
+        right: -0.8rem;
+        bottom: 3rem;
+        @include responsive(width, 6.8rem);
+        @include responsive(height, 5.125rem);
+      }
+    }
+  }
+}
+
+@media (min-width: 769) {
+  .users-mobile-btn {
+    display: none;
+  }
+
+  .stats-heading {
+    @include responsive(font-size, 3.5rem);
+  }
+
+  .stats-sub-heading {
+    @include responsive(font-size, 1.5rem);
+  }
+
+  #partners {
+    .slide img {
+      @include responsive(height, 3.125rem);
+    }
+  }
+
+  #users {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+    @include responsive(gap, 1.25rem);
+
+    .users-card {
+      h1 {
+        @include responsive(font-size, 2rem);
+        @include responsive(max-width, 38.2rem);
+        @include responsive(margin-bottom, 2rem);
+      }
+    }
+
+    .users-download-card {
+      display: block;
+      background-color: $light-grey;
+      position: relative;
+      @include responsive(padding, 2.5rem);
+      @include responsive(border-radius, 2rem);
+      @include responsive(max-height, 18.9rem);
+
+      h1 {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        @include responsive(font-size, 1.25rem);
+        @include responsive(margin-top, 1rem);
+        @include responsive(margin-bottom, 0.6rem);
+        @include responsive(max-width, 14.1rem);
+      }
+
+      .users-download-card-img {
+        @include responsive(width, 3.5rem);
+        @include responsive(height, 3.5rem);
+      }
+
+      .users-download-card-art {
+        position: absolute;
+        right: -0.8rem;
+        bottom: 3rem;
+        @include responsive(width, 6.8rem);
+        @include responsive(height, 5.125rem);
+      }
+    }
+  }
+}
+
+@media (min-width: 1025) {
+  .users-mobile-btn {
+    display: none;
+  }
+
+  .stats-heading {
+    @include responsive(font-size, 3.5rem);
+  }
+
+  .stats-sub-heading {
+    @include responsive(font-size, 1.5rem);
+  }
+
+  #partners {
+    .slide img {
+      @include responsive(height, 3.125rem);
+    }
+  }
+
+  #users {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+    @include responsive(gap, 1.25rem);
+
+    .users-card {
+      h1 {
+        @include responsive(font-size, 2rem);
+        @include responsive(max-width, 38.2rem);
+        @include responsive(margin-bottom, 2rem);
+      }
+    }
+
+    .users-download-card {
+      display: block;
+      background-color: $light-grey;
+      position: relative;
+      @include responsive(padding, 2.5rem);
+      @include responsive(border-radius, 2rem);
+      @include responsive(max-height, 18.9rem);
+
+      h1 {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        @include responsive(font-size, 1.25rem);
+        @include responsive(margin-top, 1rem);
+        @include responsive(margin-bottom, 0.6rem);
+        @include responsive(max-width, 14.1rem);
+      }
+
+      .users-download-card-img {
+        @include responsive(width, 3.5rem);
+        @include responsive(height, 3.5rem);
+      }
+
+      .users-download-card-art {
+        position: absolute;
+        right: -0.8rem;
+        bottom: 3rem;
+        @include responsive(width, 6.8rem);
+        @include responsive(height, 5.125rem);
+      }
+    }
+  }
+}
