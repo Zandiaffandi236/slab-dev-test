@@ -1,0 +1,199 @@
+.off-screen-menu {
+  background-color: $navy-blue;
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 0.3s ease;
+
+  li {
+    list-style: none;
+    margin-bottom: 2rem;
+
+    a {
+      text-decoration: none;
+      color: $pure-white;
+      font-size: 2rem;
+    }
+  }
+}
+
+.off-screen-menu.active {
+  right: 0;
+}
+
+#navbar {
+  @include responsive-padding(1.25rem, 6.25rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .ham-menu {
+    display: none;
+  }
+
+  .middle-menu {
+    @include responsive(gap, 3rem);
+  }
+
+  .end-menu {
+    @include responsive(gap, 1.5rem);
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: $navy-blue;
+      font-weight: bold;
+      position: relative;
+      @include responsive(font-size, 1rem);
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px; // Adjust the position if needed
+        width: 100%;
+        height: 2px; // Thickness of the underline
+        background-color: $royal-blue;
+        transform: scaleX(0); // Start with the line hidden
+        transform-origin: left; // Animation starts from the left
+        transition: transform 0.3s ease; // Animation timing
+      }
+
+      &:hover::after {
+        transform: scaleX(1); // Expand line from left to right
+      }
+    }
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+.nav-img {
+  width: 126.51px;
+  height: 48px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.nav-btn {
+  @include responsive(border-radius, 2rem);
+  @include responsive(padding, 1rem);
+  @include responsive(font-size, 1rem);
+  background-color: $royal-blue;
+  border: none;
+  color: $pure-white;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden; // Hide the overflow for the hover effect
+  z-index: 0; // Ensure the content is above the overlay
+
+  // Base style for the button
+  &:hover {
+    cursor: pointer;
+  }
+
+  // Create the overlay effect using ::before
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: darken($royal-blue, 20%);
+    transform: translateX(-100%); // Start from the left outside the button
+    transition: transform 0.3s ease; // Controls the transition speed
+    z-index: -1; // Position behind the text
+  }
+
+  // Animate the overlay on hover
+  &:hover::before {
+    transform: translateX(0); // Slide in from left to right
+  }
+}
+
+@media (max-width: 768px) {
+  #navbar {
+    .nav-item {
+      display: none;
+    }
+
+    .ham-menu {
+      display: block;
+      height: 50px;
+      width: 50px;
+      margin-left: auto;
+      position: relative;
+
+      span {
+        height: 5px;
+        width: 100%;
+        background-color: $royal-blue;
+        border-radius: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.3s ease;
+      }
+
+      span:nth-child(1) {
+        top: 25%;
+      }
+
+      span:nth-child(3) {
+        top: 75%;
+      }
+    }
+
+    .ham-menu.active {
+      span:nth-child(1) {
+        top: 50%;
+        background-color: $pure-white;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        top: 50%;
+        background-color: $pure-white;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+
+  .nav-btn {
+    font-size: 1.75rem;
+    border-radius: 2rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .off-screen-menu {
+    li {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      font-size: 0.5rem;
+    }
+  }
+}

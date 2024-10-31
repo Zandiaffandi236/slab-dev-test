@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("../font/Gilroy-Regular.ttf") format("ttf");
+  // src: url('./assets/fonts/Gilroy-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy Bold";
+  src: url("../font//Gilroy-Bold.ttf") format("ttf");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Gilroy Bold", sans-serif;
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 8px;
+  }
+}
+
+@function mobileScale($size1440px) {
+  @return calc(#{$size1440px} * (320 / 1440));
+}
+
+@function tabScale($size1440px) {
+  @return calc(#{$size1440px} * (481 / 1440));
+}
+
+@function smallLaptopScale($size1440px) {
+  @return calc(#{$size1440px} * (769 / 1440));
+}
+
+@mixin responsive($property, $value, $design-width: 1440px) {
+  #{$property}: $value;
+
+  @media (max-width: 1200px) {
+    #{$property}: ($value / $design-width) * 1200px;
+  }
+
+  @media (max-width: 1024px) {
+    #{$property}: ($value / $design-width) * 1024px;
+  }
+
+  @media (max-width: 768px) {
+    #{$property}: ($value / $design-width) * 768px;
+  }
+
+  @media (max-width: 480px) {
+    #{$property}: ($value / $design-width) * 480px;
+  }
+}
+
+@mixin responsive-padding($top-bottom, $left-right, $design-width: 1440px) {
+  padding: $top-bottom $left-right;
+
+  @media (max-width: 1200px) {
+    padding: ($top-bottom / $design-width) * 1200px
+      ($left-right / $design-width) * 1200px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: ($top-bottom / $design-width) * 1024px
+      ($left-right / $design-width) * 1024px;
+  }
+
+  @media (max-width: 768px) {
+    padding: ($top-bottom / $design-width) * 768px ($left-right / $design-width) *
+      768px;
+  }
+
+  @media (max-width: 576px) {
+    padding: ($top-bottom / $design-width) * 576px ($left-right / $design-width) *
+      576px;
+  }
+}
+
+$primary-color: #3498db;
+$royal-blue: #403df4;
+$pure-white: #ffffff;
+$navy-blue: #001a42;
