@@ -155,11 +155,11 @@ $light-grey: #f6f6f6;
   display: flex;
   gap: 0.6rem;
   align-items: center;
-  background-color: $pure-white;
-  border: none;
+  text-decoration: none;
+  color: $navy-blue;
   border-radius: 1rem;
   font-size: 0.8rem;
-  padding: 1rem;
+  // padding: 1rem;
   font-weight: bold;
 
   &:hover {
@@ -174,7 +174,7 @@ $light-grey: #f6f6f6;
   @media (min-width: 481px) {
     @include responsive(font-size, 1rem);
     @include responsive(gap, 0.625rem);
-    @include responsive(gap, 1.5rem);
+    // @include responsive(padding, 1.5rem);
 
     .sec-btn-icon {
       @include responsive(width, 0.75rem);
@@ -185,7 +185,7 @@ $light-grey: #f6f6f6;
   @media (min-width: 769px) {
     @include responsive(font-size, 1rem);
     @include responsive(gap, 0.625rem);
-    @include responsive(gap, 1.5rem);
+    // @include responsive(padding, 1.5rem);
 
     .sec-btn-icon {
       @include responsive(width, 0.75rem);
@@ -196,7 +196,7 @@ $light-grey: #f6f6f6;
   @media (min-width: 1025px) {
     @include responsive(font-size, 1rem);
     @include responsive(gap, 0.625rem);
-    @include responsive(gap, 1.5rem);
+    // @include responsive(padding, 1.5rem);
 
     .sec-btn-icon {
       @include responsive(width, 0.75rem);

@@ -1,0 +1,122 @@
+#featured {
+  @include responsive-padding(9.375rem, 6.25rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .featured-header {
+    h1 {
+      font-size: 1.75rem;
+    }
+  }
+
+  .featured-items {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+  }
+
+  .feature {
+    .feature-img {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: normal;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: normal;
+    }
+
+    hr {
+      margin-bottom: 1.2rem;
+    }
+  }
+}
+
+@media (min-width: 481px) {
+  #featured {
+    .featured-header {
+      h1 {
+        @include responsive(max-width, 52.625rem);
+        @include responsive(font-size, 3.75rem);
+        font-weight: normal;
+      }
+    }
+
+    .featured-items {
+      display: grid;
+      grid-template-columns: auto auto;
+
+      .feature {
+        h3 {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  #featured {
+    .featured-header {
+      h1 {
+        @include responsive(max-width, 52.625rem);
+        @include responsive(font-size, 3.75rem);
+        font-weight: normal;
+      }
+    }
+
+    .featured-items {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      gap: 4.5rem;
+
+      .feature {
+        .feature-img {
+          @include responsive(height, 7.5rem);
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  #featured {
+    .featured-header {
+      h1 {
+        @include responsive(max-width, 52.625rem);
+        @include responsive(font-size, 3.75rem);
+        font-weight: 300;
+      }
+    }
+
+    .featured-items {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      gap: 4.5rem;
+
+      .feature {
+        .feature-img {
+          @include responsive(height, 7.5rem);
+          width: auto;
+        }
+
+        h2 {
+          font-size: 2rem;
+          font-weight: normal;
+        }
+
+        h3 {
+          font-size: 1rem;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}

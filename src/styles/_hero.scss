@@ -22,6 +22,7 @@
 }
 
 .heading-btn {
+  @include responsive(gap, 2rem);
   margin-top: 1rem;
   display: flex;
 }
