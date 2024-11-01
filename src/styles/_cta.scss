@@ -1,0 +1,263 @@
+#cta {
+  @include responsive-padding(20rem, 6.25rem);
+
+  .cta-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .cta-heading {
+      max-width: 20rem;
+
+      h1 {
+        font-size: 1.4rem;
+        text-align: center;
+        font-weight: normal;
+      }
+    }
+
+    .cta-art-1 {
+      position: absolute;
+      top: -7rem;
+      left: 0;
+      z-index: -1;
+      height: 4rem;
+      width: auto;
+    }
+
+    .cta-coin-1 {
+      position: absolute;
+      top: -3.75rem;
+      left: 4.5rem;
+      z-index: -1;
+      height: 2.5rem;
+      width: auto;
+      transform: rotate(15deg);
+    }
+
+    .cta-art-2 {
+      position: absolute;
+      top: -3rem;
+      right: 0;
+      z-index: -1;
+      height: 3.5rem;
+      width: auto;
+    }
+
+    .cta-coin-2 {
+      position: absolute;
+      top: -3.25rem;
+      right: 7rem;
+      z-index: -1;
+      height: 1.75rem;
+      width: auto;
+      transform: rotate(195deg);
+    }
+
+    .cta-art-3 {
+      position: absolute;
+      bottom: -5rem;
+      right: 0;
+      z-index: -1;
+      height: 3.75rem;
+      width: auto;
+    }
+
+    .cta-coin-3 {
+      position: absolute;
+      bottom: -2.25rem;
+      right: 0;
+      z-index: -1;
+      height: 4.25rem;
+      width: auto;
+      transform: rotate(-45deg);
+    }
+
+    .cta-art-4 {
+      position: absolute;
+      bottom: -8rem;
+      left: 2.5rem;
+      z-index: 1;
+      height: 3rem;
+      width: auto;
+    }
+
+    .cta-coin-4 {
+      position: absolute;
+      bottom: -6rem;
+      left: 1rem;
+      z-index: -1;
+      height: 2.5rem;
+      width: auto;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+@media (min-width: 481px) {
+  #cta {
+    .cta-content {
+      .cta-heading {
+        @include responsive(max-width, 65.625rem);
+
+        h1 {
+          @include responsive(font-size, 4.5rem);
+        }
+      }
+
+      .cta-art-1 {
+        @include responsive(height, 9.1875rem);
+      }
+
+      .cta-coin-1 {
+        @include responsive(height, 5.6875rem);
+      }
+
+      .cta-art-2 {
+        @include responsive(height, 8.1875rem);
+      }
+
+      .cta-coin-2 {
+        @include responsive(height, 4.4375rem);
+      }
+
+      .cta-art-3 {
+        @include responsive(height, 9.1875rem);
+      }
+
+      .cta-coin-3 {
+        @include responsive(height, 10.8125rem);
+      }
+
+      .cta-art-4 {
+        @include responsive(height, 7.3125rem);
+      }
+
+      .cta-coin-4 {
+        @include responsive(height, 6.5625rem);
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  #cta {
+    .cta-content {
+      .cta-heading {
+        @include responsive(max-width, 65.625rem);
+
+        h1 {
+          @include responsive(font-size, 4.5rem);
+        }
+      }
+
+      .cta-art-1 {
+        @include responsive(height, 9.1875rem);
+        top: -8rem;
+        left: 2rem;
+      }
+
+      .cta-coin-1 {
+        @include responsive(height, 5.6875rem);
+        top: -2.75rem;
+        left: 8rem;
+      }
+
+      .cta-art-2 {
+        @include responsive(height, 8.1875rem);
+        right: 5rem;
+      }
+
+      .cta-coin-2 {
+        @include responsive(height, 4.4375rem);
+        right: 18rem;
+      }
+
+      .cta-art-3 {
+        @include responsive(height, 9.1875rem);
+        bottom: -8rem;
+        right: 8rem;
+      }
+
+      .cta-coin-3 {
+        @include responsive(height, 10.8125rem);
+        right: 8rem;
+        bottom: -3rem;
+      }
+
+      .cta-art-4 {
+        @include responsive(height, 7.3125rem);
+        bottom: -12rem;
+        left: 10rem;
+      }
+
+      .cta-coin-4 {
+        @include responsive(height, 6.5625rem);
+        left: 7rem;
+        bottom: -9rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  #cta {
+    .cta-content {
+      .cta-heading {
+        @include responsive(max-width, 65.625rem);
+
+        h1 {
+          @include responsive(font-size, 4.5rem);
+        }
+      }
+
+      .cta-art-1 {
+        @include responsive(height, 9.1875rem);
+        top: -11rem;
+      }
+
+      .cta-coin-1 {
+        @include responsive(height, 5.6875rem);
+        top: -4rem;
+        left: 12rem;
+      }
+
+      .cta-art-2 {
+        @include responsive(height, 8.1875rem);
+        top: -5rem;
+      }
+
+      .cta-coin-2 {
+        @include responsive(height, 4.4375rem);
+        top: -6rem;
+        right: 24rem;
+      }
+
+      .cta-art-3 {
+        @include responsive(height, 9.1875rem);
+        bottom: -12rem;
+        right: 10rem;
+      }
+
+      .cta-coin-3 {
+        @include responsive(height, 10.8125rem);
+        bottom: -5rem;
+        right: 10rem;
+      }
+
+      .cta-art-4 {
+        @include responsive(height, 7.3125rem);
+        bottom: -18rem;
+        left: 16rem;
+      }
+
+      .cta-coin-4 {
+        @include responsive(height, 6.5625rem);
+        bottom: -14rem;
+        left: 12rem;
+      }
+    }
+  }
+}

@@ -1,4 +1,3 @@
-import anime from 'animejs';
 import ScrollReveal from 'scrollreveal';
 
 // Contoh penggunaan ScrollReveal
