@@ -110,6 +110,7 @@ $light-grey: #f6f6f6;
 
   &:hover {
     cursor: pointer;
+    background-color: darken($color: $golden-yellow, $amount: 10);
   }
 
   .main-btn-icon {
