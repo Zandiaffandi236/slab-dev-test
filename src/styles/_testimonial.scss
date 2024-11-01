@@ -1,1 +1,176 @@
+#testimonials {
+  // @include responsive-padding(12.5rem, 6.25rem);
 
+  .testimonials-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      margin-block-start: 0;
+      margin-block-end: 0;
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.swiper-slide {
+  height: auto;
+  width: 16rem;
+  background-color: #f6f6f6;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  hr {
+    margin: 1rem 0;
+  }
+}
+
+.testimonial-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  img {
+    height: 3rem;
+    width: auto;
+  }
+
+  .testimonial-name {
+    font-size: 1rem;
+  }
+
+  .testimonial-role {
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 481px) {
+  #testimonials {
+    .testimonials-heading {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .swiper-slide {
+    width: 20rem;
+    font-size: 1.25rem;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    hr {
+      margin: 1rem 0;
+    }
+  }
+
+  .testimonial-profile {
+    gap: 1.25rem;
+
+    img {
+      height: 3.5rem;
+    }
+
+    .testimonial-name {
+      font-size: 1.25rem;
+    }
+
+    .testimonial-role {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  #testimonials {
+    .testimonials-heading {
+      h1 {
+        font-size: 2.25rem;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .swiper-slide {
+    width: 25rem;
+    font-size: 1.25rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    hr {
+      margin: 1.5rem 0;
+    }
+  }
+
+  .testimonial-profile {
+    gap: 1.25rem;
+
+    img {
+      height: 3.5rem;
+    }
+
+    .testimonial-name {
+      font-size: 1.5rem;
+    }
+
+    .testimonial-role {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  #testimonials {
+    .testimonials-heading {
+      h1 {
+        font-size: 4.5rem;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .swiper-slide {
+    width: 32.125rem;
+    font-size: 1.25rem;
+    border-radius: 2rem;
+    gap: 2.5rem;
+
+    p {
+      font-size: 1.75rem;
+    }
+
+    hr {
+      margin: 2rem 0;
+    }
+  }
+
+  .testimonial-profile {
+    gap: 1rem;
+
+    img {
+      height: 4.5rem;
+    }
+
+    .testimonial-name {
+      font-size: 1.5rem;
+    }
+
+    .testimonial-role {
+      font-size: 1rem;
+    }
+  }
+}

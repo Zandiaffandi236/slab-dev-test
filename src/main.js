@@ -1,5 +1,17 @@
 import ScrollReveal from 'scrollreveal';
 
+var swiper = new Swiper(".swiper", {
+  spaceBetween: 30,
+  slidesPerView: "auto",
+  loop: true,
+  speed: 4000,
+  freeMode: true,
+  allowTouchMode: false,
+  autoplay: {
+    delay: 0,
+  },
+});
+
 // Contoh penggunaan ScrollReveal
 ScrollReveal().reveal('.nav-item', {
   distance: '50px',
