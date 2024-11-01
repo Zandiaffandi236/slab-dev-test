@@ -1,0 +1,135 @@
+#secured {
+  @include responsive-padding(9.375rem, 6.25rem);
+
+  .secured-img {
+    display: none;
+  }
+
+  .secured-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .secured-heading {
+      h1 {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        font-size: 2rem;
+        font-weight: normal;
+        margin-top: 1rem;
+      }
+    }
+
+    .secured-sub-heading {
+      p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) {
+  #secured {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    @include responsive(gap, 6.25rem);
+
+    .secured-img {
+      display: block;
+
+      img {
+        @include responsive(width, 33.5rem);
+        @include responsive(height, 27.6rem);
+      }
+    }
+
+    .secured-desc {
+      @include responsive(gap, 2rem);
+
+      .secured-heading {
+        h1 {
+          @include responsive(margin-top, 1rem);
+        }
+      }
+
+      .secured-sub-heading {
+        p {
+          @include responsive(font-size, 1.6rem);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  #secured {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    @include responsive(gap, 6.25rem);
+
+    .secured-img {
+      display: block;
+
+      img {
+        @include responsive(width, 33.5rem);
+        @include responsive(height, 27.6rem);
+      }
+    }
+
+    .secured-desc {
+      @include responsive(gap, 2rem);
+
+      .secured-heading {
+        h1 {
+          @include responsive(margin-top, 1rem);
+          @include responsive(font-size, 3.4rem);
+        }
+      }
+
+      .secured-sub-heading {
+        p {
+          @include responsive(font-size, 1.6rem);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  #secured {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    @include responsive(gap, 6.25rem);
+
+    .secured-img {
+      display: block;
+
+      img {
+        @include responsive(width, 33.5rem);
+        @include responsive(height, 27.6rem);
+      }
+    }
+
+    .secured-desc {
+      @include responsive(gap, 2rem);
+
+      .secured-heading {
+        h1 {
+          @include responsive(margin-top, 1rem);
+          @include responsive(font-size, 3.4rem);
+        }
+      }
+
+      .secured-sub-heading {
+        p {
+          @include responsive(font-size, 1.6rem);
+        }
+      }
+    }
+  }
+}
