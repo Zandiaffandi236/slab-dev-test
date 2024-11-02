@@ -1,5 +1,6 @@
 #hero {
   @include responsive-padding(3.875rem, 6.25rem);
+  margin-top: 5rem;
 
   h1 {
     margin-block-start: 0;

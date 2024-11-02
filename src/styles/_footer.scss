@@ -1,0 +1,270 @@
+#footer-cta {
+  @include responsive-padding(6.25rem, 6.25rem);
+
+  .footer-cta-card {
+    position: relative;
+    border-radius: 1rem;
+    background-image: url("../images/users-panel.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+    h1 {
+      margin-block-start: 0;
+      margin-block-end: 0;
+      color: $pure-white;
+      font-size: 1.2rem;
+      font-weight: normal;
+      padding: 1rem;
+    }
+
+    hr {
+      color: #5a6aff;
+      margin: 0.5rem 0;
+    }
+
+    .footer-cta-bottom {
+      padding: 1rem;
+
+      p {
+        display: none;
+      }
+
+      .footer-cta-btn {
+        display: flex;
+        gap: 1rem;
+      }
+    }
+  }
+}
+
+.footer-coin-1 {
+  position: absolute;
+  height: 2.25rem;
+  width: auto;
+  bottom: 3rem;
+  left: -1.75rem;
+  transform: rotate(20deg);
+}
+
+.footer-coin-2 {
+  position: absolute;
+  height: 2.25rem;
+  width: auto;
+  bottom: 5.5rem;
+  left: -1.75rem;
+  transform: rotate(-30deg);
+}
+
+footer {
+  @include responsive-padding(1rem, 6.25rem);
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: $navy-blue;
+      margin: 0 0.2rem;
+    }
+  }
+
+  .footer-menus {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+
+    .footer-img {
+      img {
+        height: 2.5rem;
+        width: auto;
+      }
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 2rem;
+
+      p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .sub-menu {
+        .sub-menu-items {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          a {
+            font-size: 1rem;
+            text-decoration: none;
+            color: $navy-blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) {
+  #footer-cta {
+    .footer-cta-card {
+      h1 {
+        font-size: 2.5rem;
+        padding: 1.5rem;
+      }
+
+      .footer-cta-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+          margin-block-start: 0;
+          margin-block-end: 0;
+          display: block;
+          color: $pure-white;
+        }
+      }
+    }
+  }
+
+  footer {
+    .footer-menus {
+      .menu {
+        gap: 3rem;
+
+        p {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  #footer-cta {
+    .footer-cta-card {
+      h1 {
+        font-size: 2.5rem;
+        padding: 2rem;
+        width: 40rem;
+      }
+
+      .footer-cta-bottom {
+        padding: 1rem 1rem 1rem 2rem;
+
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .footer-coin-1 {
+    height: 3rem;
+  }
+
+  .footer-coin-2 {
+    height: 3rem;
+  }
+
+  footer {
+    .footer-bottom {
+      a {
+        margin: 0 0.5rem;
+      }
+    }
+
+    .footer-menus {
+      flex-direction: row;
+      gap: 13rem;
+
+      .menu {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2rem;
+
+        p {
+          font-size: 1.5rem;
+        }
+
+        .sub-menu-items {
+          a {
+            font-size: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  #footer-cta {
+    .footer-cta-card {
+      h1 {
+        font-size: 3.5rem;
+        padding: 3.125rem;
+        width: 57.2rem;
+      }
+
+      .footer-cta-bottom {
+        padding: 2rem 2rem 2rem 3.125rem;
+
+        p {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .footer-coin-1 {
+    height: 4rem;
+    bottom: 5rem;
+    left: -3rem;
+  }
+
+  .footer-coin-2 {
+    height: 4rem;
+    bottom: 10rem;
+    left: -3rem;
+  }
+
+  footer {
+    .footer-bottom {
+      a {
+        margin: 0 3rem;
+      }
+    }
+
+    .footer-menus {
+      gap: 20rem;
+
+      .menu {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 4.25rem;
+
+        p {
+          font-size: 2rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .sub-menu {
+          .sub-menu-items {
+            gap: 1rem;
+
+            a {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
