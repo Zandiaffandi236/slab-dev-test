@@ -1,0 +1,81 @@
+#faq {
+  @include responsive-padding(12.5rem, 6.25rem);
+  display: grid;
+  grid-template-columns: auto;
+  gap: 2rem;
+
+  .faq-heading {
+    h1 {
+      margin-block-start: 0;
+      margin-top: 0.5rem;
+      font-size: 2rem;
+      font-weight: normal;
+    }
+  }
+}
+
+.ac {
+  border: none !important;
+  border-bottom: 1px solid #cfcfcf !important;
+  padding: 0.5rem 0;
+
+  h2 {
+    font-weight: 300 !important;
+  }
+
+  .ac-trigger::after {
+    content: "\25BE" !important;
+  }
+}
+
+.ac.is-active {
+  .ac-header {
+    .ac-trigger::after {
+      content: "\25B4" !important;
+    }
+  }
+}
+
+@media (min-width: 481px) {
+  #faq {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (min-width: 769px) {
+  #faq {
+    gap: 0;
+
+    .faq-heading {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  #faq {
+    gap: 0;
+
+    .faq-heading {
+      h1 {
+        font-size: 4.5rem;
+      }
+    }
+  }
+
+  .ac {
+    padding: 2rem 0;
+  }
+
+  .ac-header {
+    button {
+      font-size: 1.5rem !important;
+    }
+  }
+
+  .ac-text {
+    font-size: 1.25rem !important;
+  }
+}
